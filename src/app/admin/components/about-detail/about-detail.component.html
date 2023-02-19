@@ -1,1 +1,53 @@
-<p>about-detail works!</p>
+<div class="page-header">
+  <div class="page-block">
+      <div class="row align-items-center">
+          <div class="col-md-12">
+              <div class="page-header-title">
+                  <h5 class="m-b-10">Form Elements</h5>
+              </div>
+              <ul class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                  <li class="breadcrumb-item"><a href="#!">Form Components</a></li>
+                  <li class="breadcrumb-item"><a href="#!">Form Elements</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <h3>Haqqında məlumatları</h3>
+      </div>
+      <div class="card-body">
+        <form #addOrEditForm="ngForm" (ngSubmit)="getFormData(addOrEditForm.value)">
+          <div class="row">
+            <div class="col-12">
+              <label for="title">Başlıq</label>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                class="form-control"
+                [(ngModel)]="model.title"
+              />
+            </div>
+            <div class="col-12">
+              <label for="body">Mətn</label>
+              <textarea
+                name="body"
+                id="body"
+                cols="30"
+                rows="10"
+                [(ngModel)]="model.body"
+                class="form-control"
+              ></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

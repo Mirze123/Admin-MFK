@@ -3,7 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './admin/layout/layout.component';
 
 const routes: Routes = [
-  {path:"",component:LayoutComponent}
+  {path:"",component:LayoutComponent,children:[
+    {path:"about",loadChildren:()=> import('./admin/components/about-detail/about-detail.module').then(module=>module.AboutDetailModule)}
+  ]}
 ];
 
 @NgModule({

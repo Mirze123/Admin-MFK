@@ -10,6 +10,6 @@ import { CrudService } from './crud.service';
 export class AboutDetailService extends CrudService<AboutDetail,number> {
 
   constructor(protected http:HttpClient) { 
-    super(http,`${Config.api.baseUrl}/about`);
+    super(http,`${Config.api.baseUrl}/aboutdetail`);
   }
 }
